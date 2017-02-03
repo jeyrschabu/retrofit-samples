@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'groovy'
+
+targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    maven  {
+        url "http://repo1.maven.org/maven2"
+    }
+}
+
+dependencies {
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    compile 'com.squareup.retrofit2:retrofit-mock:2.1.0'
+
+  testCompile(
+   	 'junit:junit:4.12',
+         'org.codehaus.groovy:groovy-all:2.4.4',
+         'org.spockframework:spock-core:1.0-groovy-2.4'
+    )
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+}

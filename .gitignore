@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+/gradlew
+/gradlew.bat
+/retrofit-samples.iws
+/retrofit-samples.ipr
+/.gradle/
+/build/
+/gradle/wrapper/
